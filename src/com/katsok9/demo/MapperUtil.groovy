@@ -10,7 +10,7 @@ class MapperUtil implements Serializable {
 //            case "my_step": steps.my_stem = new MyStep(_pipe, projectDefs); break
 //            default: _pipe.printColor("orange", "Not yet implemented")
 //        }
-
+        _pipe.printColor("blue", "each: ${projectDefs}")
         projectDefs.each{pdef ->
             _pipe.printColor("blue","${pdef.name}")
         }
