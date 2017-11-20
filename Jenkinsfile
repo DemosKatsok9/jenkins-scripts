@@ -4,5 +4,4 @@ def projectDefs = [
         language: 'java'
 ]
 
-library "pipes@${projectDefs.version}"
-yalla(projectDefs)
+library("pipes@${projectDefs.version}").yalla(projectDefs)
