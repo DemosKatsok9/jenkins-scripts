@@ -10,7 +10,7 @@ def call(projectDefs) {
                 stage('who am I') {
                     printColor("blue", "I'm the ${BRANCH_NAME}")
                 }
-                StepsRunner.yalla(this, projectDefs)
+              //  StepsRunner.yalla(this, projectDefs)
 
             }
         }
