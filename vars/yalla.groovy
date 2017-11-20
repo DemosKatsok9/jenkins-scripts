@@ -8,7 +8,7 @@ def call(projectDefs) {
             }
            // YallaRunner.yalla(this, projectDefs)
             stage('Who Am I') {
-                printColor("orange", "this is master 1")
+                printColor("orange", "this is ${BRANCH_NAME}")
             }
         }
     }
