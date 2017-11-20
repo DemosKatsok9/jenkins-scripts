@@ -5,8 +5,9 @@ def call(projectDefs) {
         node {
             stage('checkout') {
                 checkout scm
-                printColor("blue", "I'm the 0.2.1-SNAPSHOT")
+
             }
+            stage('who am I') { printColor("blue", "I'm the 0.2.1-SNAPSHOT") }
 //            YallaRunner.yalla(this, projectDefs)
             stage('build') {
                 MavenArtifactoryUtil.buildArtifactory(this, false)
