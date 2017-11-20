@@ -5,7 +5,7 @@ def call(projectDefs) {
         node {
             checkout scm
            // YallaRunner.yalla(this, projectDefs)
-            printColor("orange", "this is master")
+            printColor("orange", "this is master 1")
         }
     }
 }
