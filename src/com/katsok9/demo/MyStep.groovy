@@ -1,8 +1,13 @@
 package com.katsok9.demo
 
-class MyStep {
+class MyStep implements JobStep{
+    MyStep(){
+        name = "MyStep"
+    }
 
-    static def HelloWorld(){
 
+    @Override
+    def doStep(Object _pipe, Object args) {
+        _pipe.printColor("yellow", "my new step")
     }
 }

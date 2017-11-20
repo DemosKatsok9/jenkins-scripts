@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 def projectDefs = [
-        version : "0.2.1-SNAPSHOT",
+        version : "new-feature",
         language: 'java'
 ]
 echo "pipes@${projectDefs.version}"

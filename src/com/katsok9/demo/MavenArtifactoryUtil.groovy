@@ -1,6 +1,13 @@
 package com.katsok9.demo
 
-class MavenArtifactoryUtil implements Serializable {
+class MavenArtifactoryUtil implements JobStep{
+    MavenArtifactoryUtil(){
+        name = 'MavenArtifactoryUtil'
+    }
+
+    def doStep(_pipe,args){
+        buildArtifactory(_pipe, args.find("deploy"))
+    }
 
     static def buildArtifactory(_pipe, boolean deploy) {
         def server = _pipe.Artifactory.server('ArtifactoryLocal')
