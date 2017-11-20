@@ -5,8 +5,8 @@ class MavenArtifactoryUtil implements JobStep{
         name = 'MavenArtifactoryUtil'
     }
 
-    def doStep(_pipe,args){
-        buildArtifactory(_pipe, args.find("deploy"))
+    def doStep(_pipe,projectDefs){
+        buildArtifactory(_pipe, true)
     }
 
     static def buildArtifactory(_pipe, boolean deploy) {
