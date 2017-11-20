@@ -3,10 +3,15 @@ import com.katsok9.demo.MavenArtifactoryUtil
 def call(projectDefs) {
     timestamps {
         node {
-            checkout scm
-            //YallaRunner.yalla(this, projectDefs)
-            printColor("green", "I'm 0.2.0-SNAPSHOT branch")
-            MavenArtifactoryUtil.buildArtifactory(this,true)
+            stage('checkout') {
+                checkout scm
+
+            }
+            stage('who am I') { printColor("green", "I'm 0.2.0-SNAPSHOT branch") }
+//            YallaRunner.yalla(this, projectDefs)
+            stage('build') {
+                MavenArtifactoryUtil.buildArtifactory(this, true)
+            }
         }
     }
 }
