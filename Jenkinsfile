@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def projectDefs = [
-        version : "0.1.33-SNAPSHOT",
+        version : "0.2.0-SNAPSHOT",
         language: 'java'
 ]
-library "pipes"
+library "pipes@${projectDefs.version}"
 yalla(projectDefs)
