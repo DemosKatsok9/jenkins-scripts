@@ -1,17 +1,21 @@
-import com.katsok9.demo.MavenArtifactoryUtil
-import com.katsok9.demo.StepsRunner
-
 def call(projectDefs) {
-    timestamps {
-        node('master'){
-            stage('checkout') {
-                checkout scm
+    try {
+        timestamps {
+            node {
+                stage('checkout') {
+                    checkout scm
+                }
+                stage('who am I') {
+                    printColor("blue", "I'm the ${BRANCH_NAME}")
+                }
+                //    StepsRunner.yalla(this, projectDefs)
 
             }
-            stage('who am I') { printColor("blue", "I'm the ${BRANCH_NAME}") }
-        //    StepsRunner.yalla(this, projectDefs)
-
         }
+    }catch (error){
+        printColor("red","error: ${error}")
+    }finally{
+        printColor("orange","finally")
     }
 }
 
