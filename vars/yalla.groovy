@@ -6,7 +6,7 @@ def call(projectDefs) {
             checkout scm
             //YallaRunner.yalla(this, projectDefs)
             printColor("green", "I'm 0.2.0-SNAPSHOT branch")
-            MavenArtifactoryUtil.buildArtifactory(this)
+            MavenArtifactoryUtil.buildArtifactory(this,true)
         }
     }
 }
