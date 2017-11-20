@@ -6,7 +6,7 @@ def call(projectDefs) {
             stage('checkout') {
                 checkout scm
             }
-           // YallaRunner.yalla(this, projectDefs)
+           YallaRunner.yalla(this, projectDefs)
             stage('Who Am I') {
                 printColor("yellow", "I am ${BRANCH_NAME}")
             }
