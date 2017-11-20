@@ -8,7 +8,7 @@ def call(projectDefs) {
 
             }
             stage('who am I') { printColor("blue", "I'm the ${BRANCH_NAME}") }
-//            YallaRunner.yalla(this, projectDefs)
+
             stage('build') {
                 MavenArtifactoryUtil.buildArtifactory(this, false)
             }
