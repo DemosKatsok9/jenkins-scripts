@@ -1,8 +1,9 @@
 import com.katsok9.demo.MavenArtifactoryUtil
+import com.katsok9.demo.StepsRunner
 
 def call(projectDefs) {
     timestamps {
-        node {
+        node('master'){
             stage('checkout') {
                 checkout scm
 
