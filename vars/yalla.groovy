@@ -1,3 +1,4 @@
+import com.katsok9.demo.MyStep
 import com.katsok9.demo.StepsRunner
 
 def call(projectDefs) {
@@ -11,7 +12,7 @@ def call(projectDefs) {
                     printColor("blue", "I'm the ${BRANCH_NAME}")
                 }
               //  StepsRunner.yalla(this, projectDefs)
-
+                MyStep.myNewFunc(this,projectDefs)
             }
         }
     }catch (error){
