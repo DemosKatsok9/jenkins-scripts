@@ -1,4 +1,4 @@
-import com.katsok9.demo.YallaRunner
+
 
 def call(projectDefs) {
     timestamps {
@@ -6,7 +6,7 @@ def call(projectDefs) {
             stage('checkout') {
                 checkout scm
             }
-           // YallaRunner.yalla(this, projectDefs)
+
             stage('Who Am I') {
                 printColor("orange", "this is ${BRANCH_NAME}")
             }
