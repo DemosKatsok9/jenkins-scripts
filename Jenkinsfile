@@ -4,5 +4,5 @@ def projectDefs = [
         language: 'java'
 ]
 
-library("pipes@${projectDefs.version}").com.katsok9.demo.StepsRunner.yalla(projectDefs)
+library("pipes@${projectDefs.version}").com.katsok9.demo.StepsRunner.yalla(this ,projectDefs)
 //yalla(projectDefs)
