@@ -11,11 +11,11 @@ class MapperUtil implements Serializable {
 //        }
         projectDefs.keySet().each { key ->
             _pipe.printColor("blue", "key: ${key}, val: ${projectDefs.get(key)}")
-            switch (key) {
-                case "version": _pipe.printColor("orange","warn: will support @grab here"); break
-                case "my_step": steps.add( new MyStep()); break
-                default: _pipe.printColor("orange", "Not yet implemented")
-            }
+//            switch (key) {
+//                case "version": _pipe.printColor("orange","warn: will support @grab here"); break
+//                case "my_step": steps.add( new MyStep()); break
+//                default: _pipe.printColor("orange", "Not yet implemented")
+//            }
 
         }
         return steps
