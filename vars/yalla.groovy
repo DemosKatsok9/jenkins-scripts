@@ -4,7 +4,8 @@ def call(projectDefs) {
     timestamps {
         node {
             checkout scm
-            YallaRunner.yalla(this, projectDefs)
+           // YallaRunner.yalla(this, projectDefs)
+            printColor("orange", "this is master")
         }
     }
 }
