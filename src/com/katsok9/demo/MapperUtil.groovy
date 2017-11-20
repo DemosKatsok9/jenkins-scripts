@@ -2,7 +2,7 @@ package com.katsok9.demo
 
 class MapperUtil implements Serializable {
 
-    def mapdefs(_pipe, projectDefs) {
+    static def mapdefs(_pipe, projectDefs) {
         def steps = [:]
 //        switch (projectDefs.language) {
 //            case "java": steps.java = new MavenArtifactoryUtil(_pipe, projectDefs); break
