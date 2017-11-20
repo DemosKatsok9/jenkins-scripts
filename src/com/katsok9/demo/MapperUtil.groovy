@@ -4,11 +4,11 @@ class MapperUtil implements Serializable {
 
     static def mapdefs(_pipe, projectDefs) {
         List<JobStep> steps = Collections.emptyList()
-        switch (projectDefs.language) {
-            case "java": steps.add(new MavenArtifactoryUtil(_pipe, projectDefs)); break
-            case "node_js": steps.add(new NpmNodeJSUtil(_pipe, projectDefs)); break
-            default: _pipe.printColor("orange", "Not yet implemented")
-        }
+//        switch (projectDefs.language) {
+//            case "java": steps.add(new MavenArtifactoryUtil(_pipe, projectDefs)); break
+//            case "node_js": steps.add(new NpmNodeJSUtil(_pipe, projectDefs)); break
+//            default: _pipe.printColor("orange", "Not yet implemented")
+//        }
         projectDefs.keySet().each { key ->
             _pipe.printColor("blue", "key: ${key}, val: ${projectDefs.get(key)}")
             switch (key) {
