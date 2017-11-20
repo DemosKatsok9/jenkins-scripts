@@ -1,13 +1,7 @@
 package com.katsok9.demo
 
 class MyStep implements JobStep{
-    MyStep(){
-        name = "MyStep"
-    }
-
-
-    @Override
-    def doStep(Object _pipe, Object args) {
-        _pipe.printColor("yellow", "my new step")
+    static def myNewFunc(_pipe, projectDefs){
+        _pipe.printColor("yellow", "my new func @ my step ")
     }
 }
