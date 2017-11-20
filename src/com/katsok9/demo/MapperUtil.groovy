@@ -12,7 +12,7 @@ class MapperUtil implements Serializable {
 //        }
 
         projectDefs.each{pdef ->
-            echo ${pdef.name}
+            _pipe.printColor("blue","${pdef.name}")
         }
         return steps
     }
