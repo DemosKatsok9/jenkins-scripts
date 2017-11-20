@@ -10,6 +10,6 @@ static def yalla( _pipe, projectDefs) {
 //                step.doStep(_pipe,projectDefs)
 //            }
 //        }
-MavenArtifactoryUtil.buildArtifactory(_pipe,false)
+    MavenArtifactoryUtil.buildArtifactory(_pipe,false)
 }
 

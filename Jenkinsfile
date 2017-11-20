@@ -4,5 +4,7 @@ def projectDefs = [
         language: 'java'
 ]
 
-library("pipes@${projectDefs.version}").com.katsok9.demo.StepsRunner.yalla(this ,projectDefs)
-//yalla(projectDefs)
+def lib = library("pipes@${projectDefs.version}").com.katsok9.demo
+lib.StepRunner.yalla(this,projectDefs)
+lib.MavenArtifactoryUtil.buildArtifactory(this,projectDefs)
+
