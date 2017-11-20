@@ -1,0 +1,11 @@
+print your msg in the color you choose
+
+available:
+"blue"
+"yellow"
+"red"
+"green"
+"orange"
+
+printColor(String msg,String color)
+
